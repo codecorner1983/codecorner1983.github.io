@@ -1,61 +1,26 @@
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background: #f9f9f9;
-  color: #333;
+.banner {
+  position: relative;
+  width: 50%;
+  height: 50vh; /* Full height of the viewport */
+  overflow: hidden;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+.banner img {
+  width: 50%;
+  height: 50%;
+  object-fit:; /* Ensures the image covers entire banner area */
+  display: block;
 }
 
-nav h1 {
-  color: #6c63ff;
-  font-weight: 600;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-nav a.active,
-nav a:hover {
-  color: #6c63ff;
-}
-
-.hero {
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
   text-align: center;
-  padding: 5rem 2rem;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  color: #6c63ff;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin: 1rem 0 2rem;
-}
-
-.btn {
-  background: #6c63ff;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.4); /* Optional overlay for readability */
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.5rem;
 }

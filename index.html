@@ -1,12 +1,432 @@
-<section class="hero">
-  <div class="hero-content">
-    <div class="text">
-      <h2>Hello, I'm Pallavi</h2>
-      <p>A passionate developer building meaningful digital experiences.</p>
-      <a href="projects.html" class="btn">View My Work</a>
-    </div>
-    <div class="image">
-      <img src="images/profile.jpg" alt="Pallavi's Photo" />
-    </div>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome to My Portfolio</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap");
+
+      :root {
+        --color-bg: #ffffff;
+        --color-primary: #111827;
+        --color-secondary: #6b7280;
+        --color-button-bg: #111827;
+        --color-button-hover-bg: #333a49;
+        --color-button-text: #ffffff;
+
+        --border-radius: 0.75rem;
+        --max-width: 1200px;
+        --spacing-xl: 5rem;
+        --spacing-lg: 3rem;
+        --spacing-md: 2rem;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background-color: #c0c0e7; /* New page background */
+        color: var(--color-primary);
+        line-height: 1.6;
+        font-size: 18px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .banner {
+        background: linear-gradient(135deg, #e0e7ff 0%, #f9fafb 100%);
+        padding: var(--spacing-xl) 1.5rem var(--spacing-xl) 1.5rem;
+        display: flex;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: var(--border-radius);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+        gap: var(--spacing-lg);
+        flex-wrap: wrap;
+      }
+
+      .banner-content {
+        max-width: 600px;
+        flex: 1 1 320px;
+      }
+
+      .banner-heading {
+        font-size: 3.25rem;
+        font-weight: 800;
+        margin: 0 0 var(--spacing-md) 0;
+        line-height: 1.1;
+        color: var(--color-primary);
+      }
+
+      .banner-subtext {
+        color: var(--color-secondary);
+        font-weight: 600;
+        font-size: 1.125rem;
+        margin-bottom: var(--spacing-lg);
+      }
+
+      .btn-primary {
+        background-color: var(--color-button-bg);
+        color: var(--color-button-text);
+        padding: 0.75rem 2.25rem;
+        border: none;
+        border-radius: var(--border-radius);
+        font-weight: 700;
+        font-size: 1.25rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        text-decoration: none;
+        user-select: none;
+        display: inline-block;
+        box-shadow: 0 4px 12px rgba(17, 24, 39, 0.3);
+      }
+
+      .btn-primary:hover,
+      .btn-primary:focus-visible {
+        background-color: var(--color-button-hover-bg);
+        transform: scale(1.05);
+        outline: none;
+      }
+
+      .banner-image-wrapper {
+        flex: 1 1 320px;
+        max-width: 320px;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .banner-image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: var(--border-radius);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .banner {
+          flex-direction: column;
+          text-align: center;
+        }
+        .banner-image-wrapper {
+          max-width: 240px;
+          margin: 0 auto 2rem auto;
+        }
+        .banner-heading {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section role="banner" aria-label="Welcome Banner" class="banner">
+      <div class="banner-content">
+        <h1 class="banner-heading">Welcome to My Portfolio</h1>
+        <p class="banner-subtext">
+          Explore my work, skills, and passion for technology with clean, modern
+          design and elegant UI.
+        </p>
+        <a href="projects.html" class="btn-primary" role="button" tabindex="0"
+          >View My Work</a
+        >
+      </div>
+      <div class="banner-image-wrapper" aria-hidden="true">
+        <img src="images/profile.jpg" alt="Photo of Pallavi, the developer" />
+      </div>
+    </section>
+    <section class="page-container">
+      <!-- Goals Section -->
+      <section class="section goals" aria-labelledby="goals-title">
+        <h2 id="goals-title" class="section-heading">My Goals</h2>
+        <p class="section-description">
+          Striving to build innovative web experiences, continuously learn new
+          technologies, and contribute to open-source projects resulting in
+          impactful solutions.
+        </p>
+      </section>
+
+      <!-- Achievements Section -->
+      <section
+        class="section achievements"
+        aria-labelledby="achievements-title"
+      >
+        <h2 id="achievements-title" class="section-heading">Achievements</h2>
+        <div class="cards-grid">
+          <article class="card" role="article" tabindex="0">
+            <div
+              class="icon-placeholder"
+              aria-hidden="true"
+              title="Projects Completed"
+            >
+              🏆
+            </div>
+            <h3>100+ Projects Delivered</h3>
+            <p>
+              Completed diverse web development projects across various
+              industries.
+            </p>
+          </article>
+          <article class="card" role="article" tabindex="0">
+            <div
+              class="icon-placeholder"
+              aria-hidden="true"
+              title="Certified Developer"
+            >
+              👩‍💻
+            </div>
+            <h3>Certified Developer</h3>
+            <p>
+              Earning certifications in web technologies and software
+              development best practices.
+            </p>
+          </article>
+          <article class="card" role="article" tabindex="0">
+            <div
+              class="icon-placeholder"
+              aria-hidden="true"
+              title="Global Collaboration"
+            >
+              🌍
+            </div>
+            <h3>Global Collaboration</h3>
+            <p>
+              Worked remotely with teams and clients worldwide, enhancing
+              communication skills.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Tours Section -->
+      <section class="section tours" aria-labelledby="tours-title">
+        <h2 id="tours-title" class="section-heading">Tours</h2>
+        <div class="cards-grid">
+          <article class="card" role="article" tabindex="0">
+            <h3>Tech Conferences 2023</h3>
+            <p>
+              Participated in multiple developer conferences sharing knowledge
+              and networking.
+            </p>
+          </article>
+          <article class="card" role="article" tabindex="0">
+            <h3>Workshops & Meetups</h3>
+            <p>
+              Hosted workshops to educate aspiring developers in web
+              technologies.
+            </p>
+          </article>
+          <article class="card" role="article" tabindex="0">
+            <h3>Community Events</h3>
+            <p>
+              Engaged in tech community events to promote collaboration and
+              innovation.
+            </p>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <style>
+      :root {
+        --color-bg: #ffffff;
+        --color-primary: #111827;
+        --color-secondary: #6b7280;
+        --color-accent-light: #eef2ff; /* pale indigo */
+        --color-accent-medium: #c7d2fe; /* indigo pastel */
+        --color-accent-soft: #f3f4f6; /* light gray */
+        --border-radius: 0.75rem;
+        --shadow-light: rgba(0, 0, 0, 0.06);
+        --max-width: 1200px;
+        --spacing-xxl: 5rem;
+        --spacing-xl: 3rem;
+        --spacing-lg: 2rem;
+        --spacing-md: 1.5rem;
+        --spacing-sm: 1rem;
+        --font-heading: "Poppins", sans-serif;
+      }
+
+      /* Container wrapping all sections */
+      .page-container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: var(--spacing-xxl) 1.5rem var(--spacing-xxl);
+        background-color: var(--color-bg);
+      }
+
+      /* Common section styling */
+      .section {
+        border-radius: var(--border-radius);
+        padding: var(--spacing-xl);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 8px 24px var(--shadow-light);
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Custom subtle background gradients and patterns per section */
+
+      /* Goals Section with gentle pastel indigo gradient */
+      .section.goals {
+        background: linear-gradient(
+          135deg,
+          var(--color-accent-light),
+          var(--color-accent-soft)
+        );
+      }
+      .section.goals::before {
+        content: "";
+        position: absolute;
+        top: -40%;
+        right: -30%;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+          circle at center,
+          rgba(99, 102, 241, 0.15) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* Achievements Section with soft indigo pattern */
+      .section.achievements {
+        background: linear-gradient(
+          135deg,
+          var(--color-accent-medium),
+          var(--color-accent-light)
+        );
+      }
+      .section.achievements::before {
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: -20%;
+        width: 350px;
+        height: 350px;
+        background: radial-gradient(
+            circle at 80% 50%,
+            rgba(99, 102, 241, 0.15) 0%,
+            transparent 70%
+          ),
+          radial-gradient(
+            circle at 30% 70%,
+            rgba(147, 197, 253, 0.1) 0%,
+            transparent 80%
+          );
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* Tours Section with very light gray background with subtle wave pattern */
+      .section.tours {
+        background: var(--color-accent-soft);
+      }
+      .section.tours::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100px;
+        background: url("https://www.transparenttextures.com/patterns/waves.png"),
+          var(--color-accent-soft);
+        background-repeat: repeat-x;
+        opacity: 0.12;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* Z-index fix so text is above backgrounds */
+      .section > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Section headings */
+      .section-heading {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 3rem;
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-md);
+      }
+
+      /* Section description */
+      .section-description {
+        font-size: 1.125rem;
+        color: var(--color-secondary);
+        max-width: 720px;
+        line-height: 1.5;
+      }
+
+      /* Grid container for Achievements and Tours cards */
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--spacing-lg);
+      }
+
+      /* Cards */
+      .card {
+        background: var(--color-bg);
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 12px var(--shadow-light);
+        padding: var(--spacing-md);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: var(--color-primary);
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+        cursor: default;
+      }
+      .card:focus,
+      .card:hover {
+        box-shadow: 0 10px 30px var(--shadow-light);
+        transform: translateY(-6px);
+        outline: none;
+      }
+
+      .card h3 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.75rem;
+        font-weight: 700;
+        font-size: 1.25rem;
+      }
+
+      .card p {
+        color: var(--color-secondary);
+        font-size: 1rem;
+        line-height: 1.4;
+        margin: 0;
+      }
+
+      /* Icon placeholders for Achievements */
+      .icon-placeholder {
+        font-size: 3rem;
+        color: #6366f1;
+        user-select: none;
+      }
+
+      /* Responsive */
+      @media (max-width: 600px) {
+        .section-heading {
+          font-size: 2.25rem;
+        }
+        .section {
+          padding: var(--spacing-lg);
+        }
+      }
+    </style>
+  </body>
+</html>

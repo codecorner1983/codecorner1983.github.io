@@ -4,6 +4,167 @@
     <meta charset="UTF-8" />
     <title>Contact Me</title>
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap");
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        /* Light background with subtle gradient overlay of translucent black */
+        background: linear-gradient(
+            to top,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0.9) 60%,
+            rgba(58, 49, 49, 0.08) 100%
+          ),
+          #6060d3; /* Base white background */
+        color: #111827;
+        line-height: 1.6;
+        font-size: 18px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      h1 {
+        text-align: center;
+        font-weight: 800;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+      nav {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #111827;
+        font-weight: 600;
+        font-size: 1.125rem;
+        transition: color 0.3s ease;
+      }
+      nav a:hover {
+        color: #333a49;
+      }
+      .contact-info {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #0c0c0e;
+        font-size: 1.125rem;
+      }
+      contact-info a:hover {
+        color: #333a49;
+      }
+      .contact-info a {
+        color: #111827;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+      .contact-form {
+        max-width: 600px;
+        margin: 0 auto 3rem auto;
+        background: #f9fafb;
+        border-radius: 0.75rem;
+        padding: 2rem;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      }
+      .contact-form label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #111827;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        font-family: inherit;
+        resize: vertical;
+        transition: border-color 0.3s ease;
+      }
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        border-color: #6366f1;
+        outline: none;
+      }
+      .contact-form button {
+        background-color: #111827;
+        color: white;
+        padding: 0.75rem 2rem;
+        border: none;
+        border-radius: 0.75rem;
+        font-weight: 700;
+        font-size: 1.125rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        user-select: none;
+      }
+      .contact-form button:hover,
+      .contact-form button:focus-visible {
+        background-color: #4338ca;
+        transform: scale(1.05);
+        outline: none;
+      }
+      .map-container {
+        max-width: 600px;
+        margin: 0 auto;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      }
+      iframe {
+        width: 100%;
+        height: 320px;
+        border: none;
+        display: block;
+      }
+      .whatsapp-container {
+        text-align: center;
+        margin-top: 2rem;
+      }
+      .whatsapp-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #25d366;
+        font-weight: 700;
+        font-size: 1.25rem;
+        text-decoration: none;
+        user-select: none;
+        filter: drop-shadow(0 0 6px #25d366);
+        transition: filter 0.3s ease, transform 0.3s ease;
+      }
+      .whatsapp-link:hover,
+      .whatsapp-link:focus-visible {
+        filter: drop-shadow(0 0 12px #25d366);
+        transform: scale(1.1);
+        outline: none;
+        text-decoration: underline;
+      }
+
+      /* Neon glowing WhatsApp icon */
+      .whatsapp-icon {
+        width: 28px;
+        height: 28px;
+        stroke: #25d366;
+        stroke-width: 1.8;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        filter: drop-shadow(0 0 8px #25d366);
+        transition: filter 0.3s ease;
+      }
+      .whatsapp-link:hover .whatsapp-icon,
+      .whatsapp-link:focus-visible .whatsapp-icon {
+        filter: drop-shadow(0 0 20px #22c55e);
+      }
+    </style>
   </head>
   <body>
     <h1>Contact Me</h1>
@@ -12,10 +173,102 @@
       <a href="projects.html">Projects</a> |
       <a href="contact.html">Contact</a>
     </nav>
-    <p>Email: karnatipallavi@gmail.com</p>
-    <p>Contact: 8919291782</p>
-    <p>
-      GitHub: <a href="https://github.com/codecorner1983">codecorner1983</a>
-    </p>
+
+    <div class="contact-info">
+      <p>
+        Email:
+        <a href="mailto:pallavikarnati@itformula1.com"
+          >pallavikarnati@itformula1.com</a
+        >
+      </p>
+      <p>Contact: 8919291782</p>
+      <p>
+        GitHub:
+        <a
+          href="https://github.com/codecorner1983"
+          target="_blank"
+          rel="noopener"
+          >codecorner1983</a
+        >
+      </p>
+    </div>
+
+    <div class="contact-form">
+      <form
+        action="https://formsubmit.co/pallavikarnati@itformula1.com"
+        method="POST"
+        novalidate
+      >
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your name"
+          required
+        />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your email"
+          required
+        />
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Your message"
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="map-container" aria-label="Google Map showing location">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509198!2d144.9537353153163!3d-37.81627997975157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f0b0b1f%3A0x5045675218cd1e0!2sYour%20Location!5e0!3m2!1sen!2sau!4v1616161616161!5m2!1sen!2sau"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <div class="whatsapp-container">
+      <a
+        href="https://wa.me/yourwhatsappnumber"
+        target="_blank"
+        rel="noopener"
+        class="whatsapp-link"
+        aria-label="Contact me on WhatsApp"
+      >
+        <svg
+          class="whatsapp-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <circle cx="12" cy="12" r="10" stroke="#25d366" stroke-width="2" />
+          <path
+            d="M16.667 7.333a5.334 5.334 0 01-7.52 6.72L7 16l2.053-.147a5.33 5.33 0 017.614-8.52z"
+            stroke="#25d366"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M13.833 13.833l1.5 1.5m-3-3l1.5 1.5"
+            stroke="#25d366"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        WhatsApp Me
+      </a>
+    </div>
   </body>
 </html>

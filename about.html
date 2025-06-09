@@ -4,16 +4,170 @@
     <meta charset="UTF-8" />
     <title>About Me</title>
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(
+            to top,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0.9) 60%,
+            rgba(0, 0, 0, 0.08) 100%
+          ),
+          #6060d3;
+       color: #111827;
+        line-height: 1.6;
+        font-size: 18px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+
+      h1 {
+        text-align: center;
+        font-weight: 800;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      nav {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #111827;
+        font-weight: 600;
+        font-size: 1.125rem;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #333a49;
+      }
+
+      .about-section {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+        margin: 20px 0;
+      }
+
+      .gallery img {
+        width: 100%;
+        border-radius: 0.5rem;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+
+      .testimonials {
+        background: #f9fafb;
+        padding: 20px;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 20px 0;
+      }
+
+      .testimonial {
+        display: none;
+        text-align: center;
+        font-style: italic;
+        margin: 10px 0;
+      }
+
+      .testimonial.active {
+        display: block;
+      }
+
+      .testimonial-author {
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      .scroll-button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #111827;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .scroll-button:hover {
+        background-color: #333a49;
+      }
+    </style>
   </head>
   <body>
     <h1>About Me</h1>
     <nav>
-      <a href="index.html">Home</a> | <a href="about.html">About Me</a> |
+      <a href="index.html">Home</a> |
+      <a href="about.html">About Me</a> |
       <a href="projects.html">Projects</a> |
       <a href="contact.html">Contact</a>
     </nav>
-    <p>
-      Hi! I’m Pallavi, a passionate developer interested in web technologies.
-    </p>
+
+    <div class="about-section">
+      <p>
+        Hi! I’m Pallavi, a passionate developer interested in web technologies.
+        I love creating interactive and user-friendly web applications that
+        solve real-world problems. My journey in web development has been
+        exciting, and I am always eager to learn new technologies and improve
+        my skills.
+      </p>
+    </div>
+
+    <h2 style="text-align: center;">My Work Gallery</h2>
+    <div class="gallery">
+      <img src="images/project1.jpg" alt="Project 1" />
+      <img src="images/project2.jpg" alt="Project 2" />
+      <img src="images/project3.jpg" alt="Project 3" />
+      <img src="images/project4.jpg" alt="Project 4" />
+      <img src="images/project5.jpg" alt="Project 5" />
+      <img src="images/project6.jpg" alt="Project 6" />
+    </div>
+
+    <div class="testimonials">
+      <h2>What People Say</h2>
+      <div class="testimonial active">
+        <p>"Pallavi is an exceptional developer! Her work is top-notch."</p>
+        <div class="testimonial-author">- Client A</div>
+      </div>
+      <div class="testimonial">
+        <p>"I was impressed by her attention to detail and creativity."</p>
+        <div class="testimonial-author">- Client B</div>
+      </div>
+      <div class="testimonial">
+        <p>"Pallavi delivered the project ahead of schedule and exceeded our expectations."</p>
+        <div class="testimonial-author">- Client C</div>
+      </div>
+      <button class="scroll-button" id="nextTestimonial">Next Testimonial</button>
+    </div>
+
+    <script>
+      const testimonials = document.querySelectorAll('.testimonial');
+      let currentTestimonial = 0;
+
+      document.getElementById('nextTestimonial').addEventListener('click', () => {
+        testimonials[currentTestimonial].classList.remove('active');
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        testimonials[currentTestimonial].classList.add('active');
+      });
+    </script>
   </body>
 </html>
